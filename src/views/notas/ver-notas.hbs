@@ -1,0 +1,45 @@
+<div class="row">
+    {{#each notes}}
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title d-flex justify-content-between aling-items-center">
+                    {{titulo}} <a href="/notas/editar/{{_id}}"><i class="fas fa-edit"></i></a>
+                </h4>
+                <p>
+                    {{descripcion}}
+                </p>
+                <div class="card-footer text-muted">
+                    {{fecha}}
+                </div>
+                <form action="/notas/borrar/{{_id}}?_method=DELETE" method="POST">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-outline-danger btn-block btn-sm">Borrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    {{else}}
+
+    <div class="card text-center">
+        <div class="card-header">
+            <h2>Hola {{user.nombre}}</h2>
+        </div>
+        <div class="card-body alert alert-warning">
+            <h5 class="card-title ">Actual mente no existen nontas</h5>
+            <a href="/notas/nuevan" class="btn btn-success btn-block">Crear una Nota</a>
+        </div>
+    </div>
+    {{/each}}
+
+    <!-- <div class="alert alert-warning" role="alert">
+  <div class="d-grid gap-2 d-md-flex justify-content-end">
+      Actual mente no existen nontas.
+        <a href="/notas/nuevan" class="btn btn-success btn-block">Crear una Nota</a>
+    </div>
+    </div>
+  </div>-->
+
+</div>

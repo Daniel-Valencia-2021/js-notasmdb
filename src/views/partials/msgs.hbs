@@ -1,0 +1,37 @@
+{{#if success_msg}}
+<script>
+   // swal("Nota Agregada", "Muy bien", "success");
+   swal("Nota Agregada", "{{success_msg}}", "success");
+</script>
+{{/if}}
+
+{{#if edit_msg}}
+<script>
+    swal("Nota Editada", "Muy bien", "success");
+</script>
+{{/if}}
+
+{{#if delete_msg}}
+<script>
+    swal("Nota Borrada", "Muy bien", "warning");
+</script>
+{{/if}}
+
+{{#if error_msg}}
+<script>
+    //swal("Error", "Este correo ya existe", "warning");
+    swal("Error", "{{error_msg}}", "warning");
+</script>
+{{/if}}
+
+{{#if regis_msg}}
+<script>
+    swal("Usuario Registrado", "Ya puedes ingresar con tus credenciales", "success");
+</script>
+{{/if}}
+
+{{#if gerror_msg}}
+<script>
+    swal("Error", "Algo salio mal", "warning");
+</script>
+{{/if}}

@@ -1,0 +1,1 @@
+Al regresar ejecuta los comandos: mongod - npm run dev no se te olvide iniciar el apache y el servicio de mongoDB

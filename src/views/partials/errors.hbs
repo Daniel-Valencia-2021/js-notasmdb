@@ -1,0 +1,11 @@
+{{#if error}}
+<script>
+    swal("Algo salio mal", '{{error}}', "error");
+</script>
+{{/if}}
+
+{{#each errors}}
+<script>
+    swal("Algo salio mal", '', "error");
+</script>
+{{/each}}
